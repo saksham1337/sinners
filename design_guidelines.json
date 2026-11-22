@@ -1,0 +1,181 @@
+{
+  "archetype": "ARCHETYPE 4: SWISS & HIGH-CONTRAST + ARCHETYPE 1: ORGANIC & EARTHY PRECISION",
+  "project_name": "Sinnovation (sinnovation.si)",
+  "tagline": "Your brand. Our team. Delivered on time.",
+  "tone_and_voice": "Confident, calm, direct, operations partner mindset. Zero hype, zero emojis. Let real verified delivery numbers lead (1.04M impressions, 9.91% CTR, 408% follower growth, 78M creator views, +206%/+394%/+368% Instagram growth). Highly organized, Swiss precision, understated competence.",
+  "typography": {
+    "font_pair": {
+      "headline": "Plus Jakarta Sans or General Sans, fallback system-ui, font-semibold or font-bold, tracking-tight",
+      "body": "IBM Plex Sans, Inter or system-ui, leading-relaxed",
+      "numbers_stats": "IBM Plex Mono or JetBrains Mono, font-medium, tabular-nums tracking-tighter",
+      "eyebrow_badge": "IBM Plex Mono, uppercase, tracking-[0.2em], text-xs font-medium"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100",
+      "h3": "text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-neutral-100",
+      "h4": "text-lg sm:text-xl font-medium text-neutral-900 dark:text-neutral-200",
+      "body_lead": "text-lg sm:text-xl text-neutral-600 dark:text-neutral-300 font-normal leading-relaxed",
+      "body": "text-sm sm:text-base text-neutral-600 dark:text-neutral-300 leading-relaxed",
+      "caption": "text-xs text-neutral-500 dark:text-neutral-400 font-mono tracking-wide"
+    }
+  },
+  "colors": {
+    "theme_mode": "Light by default with seamless Dark Mode toggle. B2B agency owners in North America value clean white/slate paper aesthetic during day and sleek charcoal at night.",
+    "palette": {
+      "light": {
+        "background": "#FBFBFA",
+        "surface": "#FFFFFF",
+        "surface_subtle": "#F4F4F2",
+        "border": "#E5E5E0",
+        "border_subtle": "#EDEDE8",
+        "text_primary": "#111418",
+        "text_secondary": "#575B62",
+        "text_muted": "#8A8F98",
+        "accent_primary": "#0F172A",
+        "accent_highlight": "#1E3A8A",
+        "emerald_accent": "#0D5940",
+        "badge_bg": "#EEF2F6",
+        "badge_border": "#CBD5E1"
+      },
+      "dark": {
+        "background": "#0C0E12",
+        "surface": "#14171E",
+        "surface_subtle": "#1B202A",
+        "border": "#272D3B",
+        "border_subtle": "#1F2430",
+        "text_primary": "#F8FAFC",
+        "text_secondary": "#94A3B8",
+        "text_muted": "#64748B",
+        "accent_primary": "#F8FAFC",
+        "accent_highlight": "#38BDF8",
+        "emerald_accent": "#34D399",
+        "badge_bg": "#182234",
+        "badge_border": "#334155"
+      }
+    },
+    "forbidden_colors": ["#7351B7", "#1B93A4", "generic bright gradient soups"]
+  },
+  "layout_and_grids": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "bento_strategy": "Mode A Tetris & Swiss Structured Grid. Asymmetrical column distribution: 8-col dominant technical breakdown paired with 4-col stat metrics.",
+    "spacing": "Generous. py-20 lg:py-28 on sections. Gap scales gap-6 to gap-12. Card internal padding p-6 or p-8.",
+    "nav_bar": "Sticky header with z-50, backdrop-blur-xl bg-white/85 dark:bg-[#0C0E12]/85 border-b border-border. Logo wordmark + symbol, 5 desktop links (Services, Work, Pricing, How It Works, About), Partner CTA button ('Request Rate Card'), Dark/Light switch."
+  },
+  "visual_enhancers": {
+    "brand_symbol": "Sinnovation geometric monogram: Interlocking 'S' formed by two precision brackets representing White-Label Invisible Integration (Agency + Delivery Pod).",
+    "data_display": "Precision stat counters with metric tags, deltas (+206%, 9.91% CTR), SLA badges (e.g. '48-hr Turnaround Guarantee', '100% Blind IP Transfer', 'White-labeled Slack / ClickUp').",
+    "textures": "Subtle hairline gridlines, 1px technical borders, monospaced coordinate badges, no noisy drop-shadows."
+  },
+  "pages_and_routes": {
+    "pages": [
+      {
+        "route": "/",
+        "name": "Home",
+        "sections": [
+          "Hero: 'Your brand. Our team. Delivered on time.' + Subheading + Dual CTAs ('Request Agency Rate Card', 'Explore Client Work') + Stat ticker (1.04M impressions, 78M creator views, 9.91% CTR, 408% growth)",
+          "Partner Value / 3 Pillars: Build (Custom Web, Webflow, Fullstack, AI tools), Grow (Paid Ads Meta/Google, SEO, Lead Gen), Content (Creative Design, Video, Creator campaigns)",
+          "6 White-Label Guarantees: 100% NDA & IP Protection, Direct or Invisible Slack integration, Strict Delivery SLAs, US/Canada overlap hours, Fixed predictable margins, Zero client poaching guarantee",
+          "How It Works (4 Quick Steps preview)",
+          "Engagement Models Overview (Dedicated Pod, Flex Sprint, White-Label Project, Overflow Retainer)",
+          "Case Studies Teaser (Number-led cards with direct metrics)",
+          "Interactive Margin Calculator / Agency ROI Estimator",
+          "FAQ Accordion Teaser",
+          "Bottom High-Intent CTA Section"
+        ]
+      },
+      {
+        "route": "/services",
+        "name": "Services Overview",
+        "description": "Comprehensive matrix of all 9 agency capabilities across Build, Grow, Content"
+      },
+      {
+        "route": "/services/:slug",
+        "name": "Service Detail (9 Services)",
+        "slugs": [
+          "web-development",
+          "ai-integrations",
+          "ui-ux-design",
+          "paid-media-meta-google",
+          "technical-seo-growth",
+          "content-video-production",
+          "creator-influencer-campaigns",
+          "conversion-rate-optimization",
+          "dedicated-developer-pods"
+        ]
+      },
+      {
+        "route": "/work",
+        "name": "Work & Case Studies",
+        "description": "4 Anonymized number-led delivery stories: 1) US D2C Agency: 1.04M Impressions & 9.91% CTR; 2) Toronto B2B Tech Agency: 408% Qualified Pipeline Growth; 3) NYC Creative Studio: 78M Creator Views & Viral Engagement; 4) Austin Digital Consultancy: Strategy-Only Full Technical Re-architecture (+206%/+394%/+368% Growth)."
+      },
+      {
+        "route": "/pricing",
+        "name": "Partner Pricing & Models",
+        "description": "Clear breakdown of 4 engagement models (no public pricing tables to preserve agency reselling markup; gated Rate Card Request Modal / Form)."
+      },
+      {
+        "route": "/how-it-works",
+        "name": "How It Works",
+        "description": "6-Step onboarding timeline from NDA signature to day-to-day Slack delivery, time zone synchronization (Bangalore + North America EST/PST overlap), and QA protocols."
+      },
+      {
+        "route": "/about",
+        "name": "About Sinnovation",
+        "description": "The Bangalore delivery advantage: Elite engineering & growth talent, engineered for North American agencies. Operations culture, leadership, strict QA standards."
+      },
+      {
+        "route": "/faq",
+        "name": "FAQ",
+        "description": "Grouped categorical accordion: Confidentiality & NDAs, Pricing & Reselling margins, Communication channels, Delivery speed, Time zone coverage."
+      },
+      {
+        "route": "/partner",
+        "name": "Become a Partner",
+        "description": "Comprehensive partnership intake form with multi-checkbox capabilities needed, monthly capacity needs, agency URL, NDA immediate request."
+      },
+      {
+        "route": "/legal/terms",
+        "name": "Terms of Service & White-Label SLAs"
+      },
+      {
+        "route": "/legal/privacy",
+        "name": "Privacy Policy & NDA Framework"
+      },
+      {
+        "route": "/admin/inbox",
+        "name": "Admin Enquiries Inbox",
+        "description": "Private partner enquiry management dashboard with status badges (New, In Review, NDA Sent, Handled), filters, detail drawer, export mock, and test submission injector."
+      }
+    ]
+  },
+  "image_urls": {
+    "office_architectural": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBhcmNoaXRlY3R1cmUlMjBtaW5pbWFsfGVufDB8fHx8MTc5NTI3OTc2Mnww&ixlib=rb-4.1.0&q=85",
+    "office_exterior": "https://images.unsplash.com/photo-1549791084-5f78368b208b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1Mjh8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBvZmZpY2UlMjBhcmNoaXRlY3R1cmUlMjBtaW5pbWFsfGVufDB8fHx8MTc5NTI3OTc2Mnww&ixlib=rb-4.1.0&q=85",
+    "team_meeting": "https://images.unsplash.com/photo-1603202662747-00e33e7d1468?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHw0fHxzb2Z0d2FyZSUyMGVuZ2luZWVyJTIwdGVhbSUyMG1lZXRpbmd8ZW58MHx8fHwxNzk1Mjc5NzYyfDA&ixlib=rb-4.1.0&q=85",
+    "team_collaboration": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwzfHxzb2Z0d2FyZSUyMGVuZ2luZWVyJTIwdGVhbSUyMG1lZXRpbmd8ZW58MHx8fHwxNzk1Mjc5NzYyfDA&ixlib=rb-4.1.0&q=85",
+    "engineering_session": "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGVuZ2luZWVyJTIwdGVhbSUyMG1lZXRpbmd8ZW58MHx8fHwxNzk1Mjc5NzYyfDA&ixlib=rb-4.1.0&q=85",
+    "tech_workspace": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwdGVjaCUyMHdvcmtzcGFjZSUyMGxhcHRvcCUyMGRlc2t8ZW58MHx8fHwxNzk1Mjc5NzY2fDA&ixlib=rb-4.1.0&q=85",
+    "workstation_setup": "https://images.unsplash.com/photo-1722159475082-0a2331580de3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTZ8MHwxfHNlYXJjaHw0fHxtaW5pbWFsJTIwdGVjaCUyMHdvcmtzcGFjZSUyMGxhcHRvcCUyMGRlc2t8ZW58MHx8fHwxNzk1Mjc5NzY2fDA&ixlib=rb-4.1.0&q=85"
+  },
+  "interactive_components": [
+    "RateCardModal (Gated email + agency details to download partner deck)",
+    "MarginCalculator (Slide project budget & monthly retainer to reveal estimated agency profit & delivery savings)",
+    "AdminInbox (Full CRUD state, search, status filter, local storage persistence)",
+    "PartnerIntakeForm (Reactive multi-step or comprehensive segmented form with validation)",
+    "ServiceCapabilityMatrix (Interactive tabs filtering services by deliverables & toolstacks)",
+    "TimezoneOverlapWidget (Live interactive clock comparing EST/PST with Bangalore IST showing 4-5 hours of dedicated live collaboration)"
+  ],
+  "testing_attributes": {
+    "rule": "Every button, link, form input, modal trigger, tab, and status switch MUST have a specific data-testid attribute in kebab-case."
+  },
+  "instructions_to_main_agent": [
+    "Use React JS with modern hooks (useState, useEffect, useMemo, etc.). Do NOT use TypeScript syntax since this is a JS project.",
+    "Install required Lucide icons or use the pre-installed lucide-react package.",
+    "Preserve pure CSS & Tailwind without center-everything anti-pattern. Use Swiss alignment with crisp 1px borders.",
+    "Implement Sonner toast notifications for all form submissions and admin status changes.",
+    "Ensure the private Admin Inbox is pre-populated with realistic initial inquiries from US and Canadian agencies to demonstrate functionality immediately.",
+    "Ensure all 9 service detail pages are fully realized with deep technical specifications, deliverables list, sample turnaround times, and white-label pricing models.",
+    "Respect contrast rules: all text must pass WCAG AA standards in both light and dark modes."
+  ]
+}

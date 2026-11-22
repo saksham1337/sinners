@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /inbox
+Disallow: /sign-in
+Disallow: /sign-up
+
+Sitemap: https://sinnovation.si/sitemap.xml

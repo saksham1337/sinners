@@ -1,0 +1,33 @@
+{
+  "summary": "First full run of the Sinnovation site (backend and frontend). Backend: 16/16 pytest pass. Enquiry create for partner and rate_card returns 201 and the record is saved, with email_status becoming 'sent' (Resend works). Bad email, country, service, model or form_type returns 422. A filled honeypot or elapsed_ms<2500 returns ok, has no id and is not stored. Access checks: 401 with no token, 403 for member, 200 for admin. form_type and status filters work. PATCH handled/new works and sets or clears handled_at; it returns 403 for member, 404 for an unknown id and 422 for a bad status. /api/me returns the role. /api/users is admin-only. Demoting the only admin returns 409. Frontend: all 11 public pages and all 9 service pages render with included, delivery flow, turnaround/pricing and FAQ. An unknown slug and an unknown route both show the custom 404. All header nav links work. The page text never contains placeholder, ₹, CPC, CPM or any currency amount. /work has 4 case studies; the auto one has case-label-strategy-auto and no stats. /pricing shows the 4 models with 'Partner rate card on request' and #rate-card. Terms is marked as a template pending legal review. Partner and rate-card forms show all 7 validation errors on empty submit, partial errors after a partial fill, and the success state after a valid submit. /inbox signed-out redirects to /sign-in. Admin (signed in by ticket) sees the list, expand details, the mark-handled/new toggle, type and status filters (counts correct, and a row drops out of a filtered view when toggled) and the Team access tab with role selects. Member sees inbox-no-access. Mobile /partner has no horizontal overflow.",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "POST /api/enquiries", "issue": "Rate limiter keys on the first X-Forwarded-For value, which the client controls, so it can be bypassed. The in-memory _recent dict is never pruned (unbounded growth) and resets on restart or across workers."},
+      {"endpoint": "POST /api/enquiries", "issue": "Backend does not require 'volume', but the frontend does. The rules differ (low impact)."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "Footer", "issues": ["SERVICES column lists only 6 of the 9 services (no Social media management, Video editing & clipping, Graphic design). This may be intentional; otherwise add them or an 'All services' link."]}
+    ]
+  },
+  "test_report_links": ["/app/backend/tests/test_enquiries_api.py", "/app/backend/tests/clerk_helpers.py", "/app/test_reports/pytest/pytest_results.xml"],
+  "action_items": [
+    "Optional: harden the rate limiter (use the last trusted proxy hop or request.client, prune old keys)",
+    "Optional: add the missing 3 services to the footer, or an 'All services' link"
+  ],
+  "critical_code_review_comments": [
+    "server.py: asyncio.create_task(_notify(...)) keeps no reference to the task, so it can be garbage-collected mid-flight. Keep a set of tasks.",
+    "server.py: _clerk_user uses blocking requests inside to_thread. Acceptable.",
+    "There is no endpoint to delete enquiries. Test cleanup had to go through Mongo by id."
+  ],
+  "updated_files": ["/app/backend/tests/test_enquiries_api.py", "/app/backend/tests/clerk_helpers.py"],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "seed_data_creation": "Created 4 TEST_ enquiries (2 API, 2 UI). All were deleted by id from Mongo afterwards. The pre-existing 'Test Agency' enquiry was left untouched. User roles were not changed.",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Run the tests with: cd /app/backend/tests && python -m pytest test_enquiries_api.py -n 0. Run serially, because the tests share CREATED state across classes. The suite makes 2 real submissions, and the rate limit is 8 per IP per 10 minutes. 'python clerk_helpers.py <user_id>' prints a sign-in ticket; open /sign-in?__clerk_ticket=<t> and it redirects to /inbox. The 409 test only runs when exactly one admin exists, and the demotion it attempts is expected to fail."
+}
